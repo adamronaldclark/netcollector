@@ -129,6 +129,9 @@ def pkt_callback(pkt):
         # Skip link local addresses.
         if "fe80:" in l3src_string:
             pass
+        # Skip if l3src is empty
+        elif l3src == "":
+            pass
         # Alert if gayteway has a new mac-address.
         elif l3src == gateway_ipv6:
             for ip in disc_ns_hosts_l:
