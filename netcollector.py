@@ -132,7 +132,7 @@ def pkt_callback(pkt):
         # Skip if l3src is empty
         elif l3src == "::":
                 pass
-            # Alert if gayteway has a new mac-address.
+        # Alert if gayteway has a new mac-address.
         elif l3src == gateway_ipv6:
             for ip in disc_ns_hosts_l:
                 if ip[1] == gateway_ipv6 and ip[0] != l2src:
