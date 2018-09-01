@@ -63,9 +63,13 @@ for h in new_host:
 def pkt_callback(pkt):
     l2src = pkt.hwsrc
     l3src = pkt.psrc
+    l3src_string = str(l3src)
     disc_host = (l2src,l3src)
     # Skip quad zero source addresses as we see these again once IP configuration completes.
     if l3src == "0.0.0.0":
+        pass
+    # Skip 169.254 APIPA addresses.
+    elif "169.254" in l3src_string:
         pass
     # Alert if gayteway has a new mac-address.
     elif l3src == gateway:
