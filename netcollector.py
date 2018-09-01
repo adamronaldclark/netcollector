@@ -155,6 +155,9 @@ def pkt_callback(pkt):
     		hosts_log_f.write("HOST: " + disc_host[0] + "," + disc_host[1] + " DISCOVERED ON " + disc_date + " AT " +
     disc_time + "\n")
     		hosts_log_f.close()
+    else:
+        print pkt.type
+        pkt.show()
 
 print "\nNETCOLLECTOR\n"
 
