@@ -130,9 +130,9 @@ def pkt_callback(pkt):
         if "fe80:" in l3src_string:
             pass
         # Skip if l3src is empty
-    elif l3src == "::":
-            pass
-        # Alert if gayteway has a new mac-address.
+        elif l3src == "::":
+                pass
+            # Alert if gayteway has a new mac-address.
         elif l3src == gateway_ipv6:
             for ip in disc_ns_hosts_l:
                 if ip[1] == gateway_ipv6 and ip[0] != l2src:
@@ -159,8 +159,7 @@ def pkt_callback(pkt):
     disc_time + "\n")
     		hosts_log_f.close()
     else:
-        print pkt.type
-        pkt.show()
+        pass
 
 print "\nNETCOLLECTOR\n"
 
