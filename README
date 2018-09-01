@@ -1,4 +1,4 @@
-NETCOLLECTOR listens on network interfaces for network discovery traffic (such as ARP) and builds a known host table from this traffic alerting you to new devices on your network. See important notes about NETCOLLECTOR below.
+NETCOLLECTOR listens on network interfaces for network discovery traffic (such as ARP and IPv6 Neighbor Solicitation) and builds a known host table from this traffic alerting you to new devices on your network. See important notes about NETCOLLECTOR below.
 
 - Written for python 2. Not tested with python 3.
 
@@ -6,7 +6,7 @@ NETCOLLECTOR listens on network interfaces for network discovery traffic (such a
 
 - Run script with "python netcollector.py" using root/sudo privileges.
 
-- The directory that netcollector is run from must be writable so the arp_hosts and hosts.log files can be created.
+- The directory that netcollector is run from must be writable so the hosts and log files can be created.
 
 - tcpdump must be installed on the system running netcollector for the scapy sniff() filter to work.
 
