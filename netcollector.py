@@ -2,7 +2,7 @@
 # Author: Adam R Clark
 # Last Edited: 1 SEP 18
 
-# Imports
+# Imports.
 import sys
 import subprocess
 import time
@@ -22,7 +22,7 @@ if scapy_dir_status == 1:
     sys.exit()
 sys.path.insert(0, scapy_dir)
 
-# Import scapy
+# Import scapy.
 from scapy.all import *
 
 # Clear the console screen before running.
@@ -82,7 +82,7 @@ for h in new_host:
 
 # Function to run each time a packet is seen.
 def pkt_callback(pkt):
-    # Check if packet is ARP
+    # Check if packet is ARP.
     if pkt.type == 2054:
         l2src = pkt.src
         l3src = pkt.psrc
@@ -120,13 +120,13 @@ def pkt_callback(pkt):
     		hosts_log_f.write("HOST: " + disc_host[0] + "," + disc_host[1] + " DISCOVERED ON " + disc_date + " AT " +
     disc_time + "\n")
     		hosts_log_f.close()
-    # Check if packet is IPv6 Neighbor Solicitation
+    # Check if packet is IPv6 Neighbor Solicitation.
     elif pkt.type == 34525:
         l2src = pkt.src
         l3src = pkt[IPv6].src
         l3src_string = str(l3src)
         disc_host = (l2src,l3src)
-        # Skip if l3src is empty
+        # Skip if l3src is empty.
         if l3src == "::":
                 pass
         # Alert if gayteway has a new mac-address.
