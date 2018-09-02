@@ -1,4 +1,4 @@
-NETCOLLECTOR listens on network interfaces for discovery traffic (such as IPv4 ARP and IPv6 Neighbor Discovery) and builds host tables from this traffic alerting you to new devices on your network. See important notes about NETCOLLECTOR below.
+NETCOLLECTOR listens on network interfaces for discovery traffic (such as IPv4 ARP and IPv6 Neighbor Discovery) and builds known host tables alerting you to new devices on your network. See important notes about NETCOLLECTOR below.
 
 - Written for python 2. Not tested with python 3.
 
