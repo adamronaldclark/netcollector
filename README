@@ -2,7 +2,7 @@ NETCOLLECTOR listens on network interfaces for discovery traffic (such as IPv4 A
 
 - Written for python 2. Not tested with python 3.
 
-- Tested on Ubuntu 16 and CentOS 7. No other distributions tested.
+- Tested on CentOS 7. No other distributions tested.
 
 - Run script with "python netcollector.py" using root/sudo privileges.
 
