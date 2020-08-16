@@ -1,13 +1,1 @@
-NETCOLLECTOR listens on network interfaces for discovery traffic (such as IPv4 ARP and IPv6 Neighbor Discovery) and builds known host tables alerting you to new devices on your network. See important notes about NETCOLLECTOR below.
-
-- Written for python 2. Not tested with python 3.
-
-- Tested on CentOS 7. No other distributions tested.
-
-- Run script with "python netcollector.py" using root/sudo privileges.
-
-- The directory that netcollector is run from must be writable so the hosts and log files can be created.
-
-- tcpdump must be installed on the system running netcollector for the scapy sniff() filter to work.
-
-- This script is written to use a local version of scapy as an import. An uncompressed version of scapy must exist in the imports folder and match the version in the sys.path.insert() function.
+A program I wrote to quickly detect IPv4 and IPv6 hosts on your broadcast domain.
